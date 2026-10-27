@@ -27,6 +27,8 @@
         href="style.css"
     >
 
+<script>/* Hide images that fail to load so no broken-image icons show */
+document.addEventListener("error",function(e){var t=e.target;if(t&&t.tagName==="IMG"){t.style.display="none";}},true);</script>
 </head>
 
 
@@ -65,7 +67,7 @@
                 <div class="small-logo">
 
                     <img
-                        src="assets/logo/voltrix-logo.jpg"
+                        src="voltrix-logo.png"
                         alt="VOLTRIX"
                     >
 
@@ -109,10 +111,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/home.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">⌂</span>
 
                     </div>
 
@@ -130,10 +129,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/category.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">▦</span>
 
                     </div>
 
@@ -151,10 +147,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/shop.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">◫</span>
 
                     </div>
 
@@ -172,10 +165,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/deals.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">%</span>
 
                     </div>
 
@@ -197,16 +187,13 @@
 
 
                 <a
-                    href="pages/gaming.html"
+                    href="gaming.html"
                     class="nav-item"
                 >
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/gaming.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">◈</span>
 
                     </div>
 
@@ -218,16 +205,13 @@
 
 
                 <a
-                    href="pages/outfit.html"
+                    href="fashion.html"
                     class="nav-item"
                 >
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/outfit.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">◇</span>
 
                     </div>
 
@@ -239,16 +223,13 @@
 
 
                 <a
-                    href="pages/looksmaxing.html"
+                    href="beauty.html"
                     class="nav-item"
                 >
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/looksmaxing.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">✦</span>
 
                     </div>
 
@@ -260,16 +241,13 @@
 
 
                 <a
-                    href="pages/mobiles.html"
+                    href="mobiles.html"
                     class="nav-item"
                 >
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/mobiles.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">▣</span>
 
                     </div>
 
@@ -281,16 +259,13 @@
 
 
                 <a
-                    href="pages/tools.html"
+                    href="accessories.html"
                     class="nav-item"
                 >
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/tools.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">⚒</span>
 
                     </div>
 
@@ -308,10 +283,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/electronics.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">▱</span>
 
                     </div>
 
@@ -329,10 +301,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/accessories.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">◎</span>
 
                     </div>
 
@@ -360,10 +329,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/about.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">i</span>
 
                     </div>
 
@@ -381,10 +347,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/rate.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">★</span>
 
                     </div>
 
@@ -402,10 +365,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/contact.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">✆</span>
 
                     </div>
 
@@ -423,10 +383,7 @@
 
                     <div class="nav-icon">
 
-                        <img
-                            src="assets/icons/fantovex.jpg"
-                            alt=""
-                        >
+                        <span class="icon-glyph" aria-hidden="true">↗</span>
 
                     </div>
 
@@ -463,7 +420,7 @@
         <div class="logo-space">
 
             <img
-                src="assets/logo/voltrix-logo.jpg"
+                src="voltrix-logo.png"
                 alt="VOLTRIX Logo"
             >
 
@@ -515,7 +472,7 @@
     <div class="hero-banner">
 
         <img
-            src="assets/banner/home-banner.jpg"
+            src="home-banner.png"
             alt="VOLTRIX Premium Shopping"
         >
 
@@ -542,7 +499,7 @@
         <div class="hero-logo">
 
             <img
-                src="assets/logo/voltrix-logo.jpg"
+                src="voltrix-logo.png"
                 alt="VOLTRIX"
             >
 
@@ -700,7 +657,7 @@
         <!-- GAMING -->
 
         <a
-            href="pages/gaming.html"
+            href="gaming.html"
             class="category-card"
         >
 
@@ -731,7 +688,7 @@
         <!-- OUTFIT -->
 
         <a
-            href="pages/outfit.html"
+            href="fashion.html"
             class="category-card"
         >
 
@@ -762,7 +719,7 @@
         <!-- LOOKSMAXING -->
 
         <a
-            href="pages/looksmaxing.html"
+            href="beauty.html"
             class="category-card"
         >
 
@@ -793,7 +750,7 @@
         <!-- MOBILES -->
 
         <a
-            href="pages/mobiles.html"
+            href="mobiles.html"
             class="category-card"
         >
 
@@ -824,7 +781,7 @@
         <!-- TOOLS -->
 
         <a
-            href="pages/tools.html"
+            href="accessories.html"
             class="category-card"
         >
 
@@ -976,7 +933,7 @@
 
 
             <a
-                href="pages/product-001.html"
+                href="gaming.html"
                 class="product-image"
             >
 
@@ -1050,7 +1007,7 @@
 
 
                     <a
-                        href="pages/product-001.html"
+                        href="gaming.html"
                         class="view-product"
                     >
 
@@ -1078,7 +1035,7 @@
 
 
             <a
-                href="pages/product-002.html"
+                href="fashion.html"
                 class="product-image"
             >
 
@@ -1152,7 +1109,7 @@
 
 
                     <a
-                        href="pages/product-002.html"
+                        href="fashion.html"
                         class="view-product"
                     >
 
@@ -1180,7 +1137,7 @@
 
 
             <a
-                href="pages/product-003.html"
+                href="beauty.html"
                 class="product-image"
             >
 
@@ -1254,7 +1211,7 @@
 
 
                     <a
-                        href="pages/product-003.html"
+                        href="beauty.html"
                         class="view-product"
                     >
 
@@ -1282,7 +1239,7 @@
 
 
             <a
-                href="pages/product-004.html"
+                href="mobiles.html"
                 class="product-image"
             >
 
@@ -1356,7 +1313,7 @@
 
 
                     <a
-                        href="pages/product-004.html"
+                        href="mobiles.html"
                         class="view-product"
                     >
 
@@ -1638,7 +1595,7 @@
         <div class="footer-logo">
 
             <img
-                src="assets/logo/voltrix-logo.jpg"
+                src="voltrix-logo.png"
                 alt="VOLTRIX"
             >
 
@@ -1755,11 +1712,7 @@
         </span>
 
 
-        <span>
-
-            POWERED BY FANTOVEX
-
-        </span>
+        <a class="powered-fx" href="https://fantovexhq.github.io/" target="_blank" rel="noopener">POWERED BY <b>FANTOVEX</b></a>
 
 
     </div>
@@ -1785,10 +1738,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/home.jpg"
-                alt="Home"
-            >
+            <span class="icon-glyph" aria-hidden="true">⌂</span>
 
         </div>
 
@@ -1811,10 +1761,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/category.jpg"
-                alt="Categories"
-            >
+            <span class="icon-glyph" aria-hidden="true">▦</span>
 
         </div>
 
@@ -1837,10 +1784,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/cart.jpg"
-                alt="Cart"
-            >
+            <span class="icon-glyph" aria-hidden="true">🛒</span>
 
         </div>
 
@@ -1863,10 +1807,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/account.jpg"
-                alt="Account"
-            >
+            <span class="icon-glyph" aria-hidden="true">○</span>
 
         </div>
 

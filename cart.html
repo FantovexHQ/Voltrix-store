@@ -386,8 +386,21 @@
 
         }
 
-    </style>
+    
+/* Text icons (icon image files were never uploaded) */
+.nav-icon,.bottom-icon{display:flex;align-items:center;justify-content:center}
+.icon-glyph{color:#00f5a0;font-size:16px;font-weight:800;line-height:1}
+.bottom-icon .icon-glyph{font-size:14px}
 
+/* Powered by Fantovex credit */
+.powered-fx{color:inherit;text-decoration:none}
+.powered-fx b{color:#32ff8a;font-weight:800;text-shadow:0 0 10px rgba(50,255,138,.6)}
+.powered-fx:hover b{text-shadow:0 0 16px rgba(50,255,138,.9)}
+.cart-credit{text-align:center;font-size:10px;letter-spacing:2px;color:#6f817c;padding:18px 0 110px}
+</style>
+
+<script>/* Hide images that fail to load so no broken-image icons show */
+document.addEventListener("error",function(e){var t=e.target;if(t&&t.tagName==="IMG"){t.style.display="none";}},true);</script>
 </head>
 
 
@@ -411,7 +424,7 @@
         <div class="logo-space">
 
             <img
-                src="assets/logo/voltrix-logo.jpg"
+                src="voltrix-logo.png"
                 alt="VOLTRIX"
             >
 
@@ -575,6 +588,8 @@
 
 <!-- BOTTOM NAV -->
 
+<p class="cart-credit"><a class="powered-fx" href="https://fantovexhq.github.io/" target="_blank" rel="noopener">POWERED BY <b>FANTOVEX</b></a></p>
+
 <nav class="bottom-nav">
 
     <a
@@ -584,10 +599,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/home.jpg"
-                alt="Home"
-            >
+            <span class="icon-glyph" aria-hidden="true">⌂</span>
 
         </div>
 
@@ -605,10 +617,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/category.jpg"
-                alt="Category"
-            >
+            <span class="icon-glyph" aria-hidden="true">▦</span>
 
         </div>
 
@@ -626,10 +635,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/cart.jpg"
-                alt="Cart"
-            >
+            <span class="icon-glyph" aria-hidden="true">🛒</span>
 
         </div>
 
@@ -647,10 +653,7 @@
 
         <div class="bottom-icon">
 
-            <img
-                src="assets/icons/account.jpg"
-                alt="Account"
-            >
+            <span class="icon-glyph" aria-hidden="true">○</span>
 
         </div>
 
@@ -750,6 +753,14 @@ document.addEventListener("DOMContentLoaded", function () {
             JSON.stringify(cart)
         );
 
+        /* keep the category pages' cart in step */
+        try {
+            localStorage.setItem(
+                "voltrix_cart",
+                JSON.stringify(cart.filter(function (item) { return item.src === "shop"; }).map(function (item) { return { id: item.pid, quantity: item.quantity }; }))
+            );
+        } catch (error) {}
+
     }
 
 
@@ -788,7 +799,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cart.forEach(function (item) {
 
             var product =
-                products[item.id];
+                products[item.id] || (item.src === "shop" ? item : null);
 
 
             if (!product) {
@@ -1057,8 +1068,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            window.location.href =
-                "checkout.html";
+            alert("Checkout is coming soon. Your cart is saved on this device.");
 
         }
     );

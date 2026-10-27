@@ -1752,3 +1752,12 @@ input:focus-visible {
     }
 
 }
+/* Powered by Fantovex credit */
+.powered-fx{color:inherit;text-decoration:none}
+.powered-fx b{color:#32ff8a;font-weight:800;text-shadow:0 0 10px rgba(50,255,138,.6)}
+.powered-fx:hover b{text-shadow:0 0 16px rgba(50,255,138,.9)}
+
+/* Text icons (icon image files were never uploaded) */
+.nav-icon,.bottom-icon{display:flex;align-items:center;justify-content:center}
+.icon-glyph{color:var(--emerald,#00f5a0);font-size:16px;font-weight:800;line-height:1}
+.bottom-icon .icon-glyph{font-size:14px}
